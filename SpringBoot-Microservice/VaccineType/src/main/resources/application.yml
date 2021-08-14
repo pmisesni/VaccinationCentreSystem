@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://issath:sesni@cluster0.4ddcw.mongodb.net/VaccineType?retryWrites=true&w=majority
+      
+
+  application:    name: vaccinetype-service
+  freemarker:    enabled: false
+  thymeleaf:    cache: false
+    prefix: classpath:/vaccinetype-server/templates/
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+  instance:    lease-renewal-interval-in-seconds: 5      
+server:
+  port: 3333
+
+  
+management:  endpoints:    web:      exposure:        include:        - '*'            
