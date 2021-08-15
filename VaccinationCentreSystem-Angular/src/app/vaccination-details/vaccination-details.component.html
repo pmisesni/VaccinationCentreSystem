@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        Vaccination Details
+        </div>
+    <div class="card-body">
+        <form [formGroup]="VaccineDetailForm" (ngSubmit)="submit()">
+ 
+            <p>
+             
+              <select formControlName="vaccine">
+                <option [ngValue]="null" disabled>Select Vaccine</option>
+                <option *ngFor="let vaccine of vaccines" [ngValue]="vaccine.id">{{vaccine.name}}</option>
+              </select>
+             
+              <button type="submit">Submit</button>
+            </p>
+             
+            </form>
+
+    </div>
+        </div>
